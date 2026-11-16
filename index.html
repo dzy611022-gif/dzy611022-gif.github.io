@@ -92,6 +92,35 @@
             font-size: 24px;
         }
     }
+    .like-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    }
+
+    .like-btn {
+        border: none;
+        background-color: #1976d2;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 8px 18px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background-color 0.2s;
+    }
+
+    .like-btn:hover {
+        background-color: #1565c0;
+    }
+
+    .like-btn:active {
+        transform: scale(0.96);
+    }
+
+    .like-btn.unlocked {
+        background-color: #e91e63;
+    }
 </style>
 </head>
 <body>
@@ -111,9 +140,15 @@
             <span class="tag">Git 版本控制</span>
         </p>
 
+        <h2>给我点个赞</h2>
+        <p class="like-row">
+            <button class="like-btn">👍 点赞</button>
+            <span class="like-count">0</span> 个赞
+        </p>
         <h2>找到我</h2>
-        <p><a href="https://github.com">这是我的 GitHub
+        <p><a href="https://github.com">这是我的 GitHub</a></p>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
