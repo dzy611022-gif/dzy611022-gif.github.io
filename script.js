@@ -27,3 +27,20 @@ likeBtn.addEventListener("click", () => {
         likeBtn.classList.add("unlocked");
     }
 });
+
+const card = document.querySelector(".card")
+const themeBtn = document.querySelector(".theme-btn");
+let themeIndex = 0;
+themeBtn.addEventListener("click", () => {
+    themeIndex = themeIndex + 1;
+    
+    card.classList.remove("theme-blue","theme-pink")
+        if (themeIndex % 3 === 1) {
+            card.classList.add("theme-pink")
+        }
+        if (themeIndex % 3 === 2) {
+            card.classList.add("theme-blue")
+        }
+
+});
+
